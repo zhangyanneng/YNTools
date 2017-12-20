@@ -31,7 +31,7 @@
  
  */
 
-@interface NSDate (ABExtend)
+@interface NSDate (YNExtend)
 
 #pragma mark - 时间获取
 /**
@@ -80,7 +80,5 @@
 #pragma mark - 时间计算
 //判断两个时间是否是同一天
 - (BOOL)isSameDayWithDate:(NSDate *)date;
-
-
 
 @end
