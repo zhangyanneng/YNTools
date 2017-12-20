@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *weakdayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentDate;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimestamp;
+@property (weak, nonatomic) IBOutlet UILabel *midnightLabel;
 
 @end
 
@@ -30,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.currentDate.text = [[NSDate date] stringWithFormat:@"日期:yyyy-MM-dd HH:mm:ss"];
+    self.currentDate.text = [[NSDate date] stringWithFormat:@"yyyy-MM-dd HH:mm:ss"];
     self.currentTimestamp.text = [NSString stringWithFormat:@"时间戳:%@",@([[NSDate date] timeIntervalSince1970])];
     self.dayLabel.text = [NSString stringWithFormat:@"天:%@",@([[NSDate date] day])];
     self.monthLabel.text = [NSString stringWithFormat:@"月:%@",@([[NSDate date] month])];
@@ -39,6 +40,8 @@
     self.secondLabel.text = [NSString stringWithFormat:@"秒:%@",@([[NSDate date] second])];
     self.minuesLabel.text = [NSString stringWithFormat:@"分:%@",@([[NSDate date] minute])];
     self.weakdayLabel.text = [NSString stringWithFormat:@"周([1 - Sunday]):%@",@([[NSDate date] weekday])];
+    
+    self.midnightLabel.text = [[[NSDate date] midnight] stringWithFormat:@"yyyy-MM-dd HH:mm:ss"];
     
 }
 
