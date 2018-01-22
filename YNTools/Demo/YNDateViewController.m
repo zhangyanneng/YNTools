@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentTimestamp;
 @property (weak, nonatomic) IBOutlet UILabel *midnightLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *charToDate;
+
 @end
 
 @implementation YNDateViewController
@@ -42,6 +44,13 @@
     self.weakdayLabel.text = [NSString stringWithFormat:@"周([1 - Sunday]):%@",@([[NSDate date] weekday])];
     
     self.midnightLabel.text = [[[NSDate date] midnight] stringWithFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    
+    NSString *dateString = @"20180115162301";
+    NSDate *date = [NSDate dateWithString:@"20180115162301" format:@"yyyyMMddHHmmss"];
+    
+    
+    self.charToDate.text = [date stringWithFormat:@"20180115162301:yyyy-MM-dd HH:mm:ss"];
     
 }
 

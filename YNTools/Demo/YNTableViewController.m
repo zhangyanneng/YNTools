@@ -45,13 +45,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
     if (indexPath.row == 1) {
-        
-        UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         YNDateViewController *dateVC = [mainStory instantiateViewControllerWithIdentifier:@"dateVCIdentity"];
         
-        [self.navigationController pushViewController:dateVC animated:YES];
-        
+        [self.navigationController pushViewController:dateVC animated:YES];  
     }
 }
 
