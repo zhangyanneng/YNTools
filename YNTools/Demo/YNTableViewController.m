@@ -23,6 +23,7 @@
     self.navigationItem.title = @"测试";
     
     self.dataSources = @[@"添加水印",@"NSDate"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
